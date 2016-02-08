@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<link href="./style.css" rel="stylesheet" type="text/css"></style>
-	</head>
-	<body onload="draw();">
-		<h1>Image Tiling</h1>
+<head>
+	<meta charset="utf-8" />
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<link href="./style.css" rel="stylesheet" type="text/css"></style>
+</head>
+<body>
+	<h1>Image Tiling</h1>
+	<span>Select Image: </span>
+
+	<form name="uploadForm" action='#' onsubmit="return false;">
+		<input id="imgFile" type="file" onchange="updateSize();" />
+		<input type="button" id="btnLoad" value="Load" onclick="loadImage();" />
+		<br>
+		<p>total size: <span id="fileSize">0</span></p>
+	</form>
+	
+	<div id="view">
 		<canvas id="canvas" width="800" height="600"></canvas>
-		<script type="application/javascript" src="./canvas.js"></script>
-	</body>
+	</div>
+
+	<script type="application/javascript" src="./canvas.js"></script>
+</body>
 </html>

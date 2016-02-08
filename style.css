@@ -1,3 +1,22 @@
-canvas {
+#view {
 	border: 2px solid #000000;
+	overflow: hidden;
+	position: relative;
+}
+
+#canvas {
+	display: block;
+	left: 0px;
+	top: 0px;
+}
+
+#zoom {
+	/*background-image: url( "./white_fade.png" ) ;*/
+	border: 1px solid #000000 ;
+	cursor: pointer ;
+	display: none ;
+	height: 200px ;
+	position: absolute ;
+	width: 200px ;
+	z-index: 100 ;
 }
